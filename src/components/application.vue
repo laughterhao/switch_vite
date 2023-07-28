@@ -5,7 +5,7 @@
         <h3>插件說明</h3>
       </div>
     </div>
-    <div class="row row-cols-1 row-cols-md-3 text-truncate" style="padding-top: 30px;">
+    <div class="row row-cols-1 row-cols-md-3 " style="padding-top: 30px;">
       <div v-for="item in items" :key="item.id" class="col" style="padding-top: 30px">
         <div class="card h-100">
           <img src="https://fakeimg.pl/300x200/200" />
