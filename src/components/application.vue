@@ -1,5 +1,5 @@
 <template>
-  <div class="container position-relative" style="padding-top: 56px">
+  <div class="container position-relative pt-4" >
     <div class="row justify-content-md-center">
       <div class="col-md-auto">
         <h3>插件說明</h3>
