@@ -1,9 +1,8 @@
 <template>
- aaaaa
 </template>
-
-<style>
-</style>
 
 <script>
 </script>
+
+<style>
+</style>
