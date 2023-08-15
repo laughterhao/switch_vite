@@ -31,14 +31,14 @@
         <div class="h-100">
           <img class="rounded-circle rounded mx-auto d-block " :src="item.pic">
           <div class="accordion pt-5 h-auto">
-            <div class="accordion-item h-100">
-              <h2 class="accordion-header">
+            <div class="accordion-item ">
+              <h2 class="accordion-header ">
                 <button class="accordion-button" @click="toggleShowContent(id)" :class="[ShowContent[id]?'':'collapsed']" type="button">
                   <h3 class="text-center pt-4 "> {{ item.title }} </h3>
                 </button>
               </h2>
-              <div v-show="ShowContent[id]" :class="[ShowContent[id]?'show':'']" class="accordion-collapse collapse">
-                <div class="accordion-body">
+              <div v-show="ShowContent[id]" :class="[ShowContent[id]?'show':'']" class=" accordion-collapse collapse h-100">
+                <div class="accordion-body h-50" >
                   <p class="fs-5 lh-base font-monospace"> {{ item.content }} </p>
                 </div>
               </div>
@@ -55,14 +55,10 @@ import { ref , reactive } from "vue"
 
 let id = (0)
 const ShowContent = reactive([false,false,false]);
-
-
 function toggleShowContent(id){
   ShowContent[id] = !ShowContent[id]
 }
 const JB_img = new URL('../img/For-Start-Option/JB_img.png', import.meta.url).href
-
-const optionimg = new URL('../img/For-Start-Option/Original.png', import.meta.url).href
 const startoptions = ref([
   { id: id++, title: '正版系統(無破解)', content: '該系統為本機原有的正版系統，如要使用Nintendo Switch Online服務(例如動物森友會或是魔物獵人)，則必須使用該系統才能享受原本Switch主機連線的樂趣喔。點選後會讀取機器本身記憶模塊的正版系統，所有功能都跟未改機之前是一模一樣的。' , pic: new URL('../img/For-Start-Option/Original.png', import.meta.url).href },
   { id: id++, title: '正版系統(帶破解)', content: '該系統為本機原有的正版系統，但額外附帶了大氣層的相簿內所有功能 可以用來修改存檔或是開金手指遊玩喔。點選後會讀取機器本身記憶模塊的正版系統，所有功能都跟未改機之前是一模一樣的，但相簿功能加載了額外的所有插件。' , pic: new URL('../img/For-Start-Option/Original_JB.png', import.meta.url).href},
